@@ -1,0 +1,49 @@
+#title {
+    background-image: url(/assets/images/pizza.jpg);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+hr {
+    background: white;
+}
+
+.background {
+    background: rgba(145, 145, 145, 0.2);
+    
+}
+
+ul, form {
+    padding-top: 5px;
+    border: 1px solid rgb(187, 187, 187);
+    box-shadow: 2px 2px 2px black;
+}
+
+form {
+    position: relative;
+    top: 2%;
+}
+
+#order {
+    height: 150px;
+}
+
+
+form .btn, label {
+    position: relative;
+    left: 5px;
+}
+
+form .btn {
+    top: 5px;
+}
+
+.btn {
+    box-shadow: 1px 1px 1px black;
+    text-shadow: 1px 1px 1px black;
+}
+
+#headers {
+    text-align: center;
+}

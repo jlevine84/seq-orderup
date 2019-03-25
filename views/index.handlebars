@@ -1,0 +1,64 @@
+<div class="container" >
+    <div class="jumbotron" id="title">
+        <div class="background"><h1 class="display-4"><strong>Order Up!</strong></h1></div>
+        <hr class="my-4">
+        <div class="background">
+            <div class="foreground"><p>Enter in the next order using "Add an Order." When an order is complete or if you need to remove an order, simply click the appropriate button!</p></div>
+        </div>    
+    </div>
+</div>
+
+<div class="container">
+    <div class="row" id="headers">
+        <div class="col-4"><h2>Orders to be Completed:</h2></div>
+        <div class="col-4"><h2>Add an Order!</h2></div>
+        <div class="col-4"><h2>Completed Orders:</h2></div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <br>
+            <ul>
+                {{#each orders}}
+                    {{#unless complete}}
+                        <li>
+                        <h5>Order #: {{id}}</h5>
+                        <p><strong>{{fullorder}}</strong></p>
+                        <button type="submit" class="btn btn-danger delete-order" data-id="{{id}}">Delete Order</button>
+                        <button type="submit" class="btn btn-success complete-order" data-id="{{id}}">Order Complete</button>
+                        </li>
+                        <br>
+                    {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col-4">
+            
+            <form>
+                <div class="form-group">
+                    <label><strong>Order:</strong></label>
+                    <textarea class="form-control" id="order"></textarea>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-4">
+            
+            <br>
+            <ul>
+                {{#each orders}}
+                    {{#if complete}}
+                        <li>
+                        <h5>Order #: {{id}}</h5>
+                        <p><strong>{{fullorder}}</strong></p>
+                        </li>
+                        <br>
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
+
